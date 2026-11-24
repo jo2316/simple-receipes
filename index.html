@@ -1,22 +1,134 @@
-<section id="about">
-    <h2>About</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover easy, delicious recipes for everyday cooking at Simple Recipes.">
+    <title>Simple Recipes | Easy Meals for Everyone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <div class="container header-content">
+            <a class="logo" href="#home">Simple<span>Recipes</span></a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="about-content">
-        <p>
-            Simple Recipes is your ultimate destination for easy-to-follow
-            recipes that make cooking enjoyable for everyone, whether you're
-            a seasoned chef or a beginner.
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">GOOD FOOD, MADE SIMPLE</p>
+                <h1>Everyday cooking<br>starts right here.</h1>
+                <p>Find easy, tasty recipes that bring people together. Simple ingredients, clear steps, and delicious results.</p>
+                <a class="button" href="#recipes">Explore recipes</a>
+            </div>
+        </section>
 
-            Our mission is to inspire and empower you to create delicious
-            meals using everyday ingredients and simple techniques.
+        <section class="section recipes-section" id="recipes">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">FRESH FROM OUR KITCHEN</p>
+                    <h2>Popular Recipes</h2>
+                    <p>Easy favourites to make any day feel special.</p>
+                </div>
 
-            We offer a wide range of cuisines, from classic comfort foods
-            to international dishes, all accompanied by step-by-step
-            instructions and helpful tips.
+                <div class="recipe-grid">
+                    <article class="recipe-card">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85" alt="A bowl of pasta with fresh herbs and vegetables">
+                        <div class="recipe-info">
+                            <span class="recipe-type">LUNCH</span>
+                            <h3>Fresh Garden Pasta</h3>
+                            <p>A bright and comforting pasta tossed with vegetables, herbs, and a light sauce.</p>
+                            <span class="recipe-time"> 준비 25 minutes</span>
+                        </div>
+                    </article>
 
-            At Simple Recipes, we believe that good food brings people
-            together. Join our community and let's cook up something
-            amazing together!
-        </p>
-    </div>
-</section>
+                    <article class="recipe-card">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="A colourful healthy salad in a bowl">
+                        <div class="recipe-info">
+                            <span class="recipe-type">LIGHT MEAL</span>
+                            <h3>Rainbow Veggie Salad</h3>
+                            <p>A crunchy mix of fresh vegetables with a simple homemade dressing.</p>
+                            <span class="recipe-time">Ready in 15 minutes</span>
+                        </div>
+                    </article>
+
+                    <article class="recipe-card">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85" alt="Homemade pizza topped with vegetables and cheese">
+                        <div class="recipe-info">
+                            <span class="recipe-type">DINNER</span>
+                            <h3>Easy Homemade Pizza</h3>
+                            <p>A family-friendly pizza with a crisp base and your favourite toppings.</p>
+                            <span class="recipe-time">Ready in 35 minutes</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="container about-layout">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85" alt="A bright home kitchen ready for cooking">
+                </div>
+                <div class="about-copy">
+                    <p class="eyebrow">A LITTLE ABOUT US</p>
+                    <h2>Cooking should be simple and joyful.</h2>
+                    <div class="about-content">
+                        <p>Simple Recipes is your ultimate destination for easy-to-follow recipes that make cooking enjoyable for everyone, whether you're a seasoned chef or a beginner.</p>
+                        <p>Our mission is to inspire and empower you to create delicious meals using everyday ingredients and simple techniques. We share a wide range of ideas, from comforting classics to fresh meals inspired by cuisines around the world.</p>
+                        <p>Every recipe is written with clear steps and helpful tips to make your time in the kitchen easier. At Simple Recipes, we believe good food brings people together. Let's cook up something amazing together!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container contact-layout">
+                <div class="contact-intro">
+                    <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+                    <h2>Get in touch</h2>
+                    <p>Have a recipe question or an idea to share? Send us a message using the form.</p>
+                </div>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is your message about?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button class="button" type="submit">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="logo footer-logo" href="#home">Simple<span>Recipes</span></a>
+            <p>Good food. Simple steps. Happy moments.</p>
+            <p class="copyright">&copy; 2026 Simple Recipes. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

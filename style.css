@@ -1,27 +1,385 @@
-/* About Section */
+/* Simple Recipes - website styles */
 
-#about {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
+:root {
+    --green: #55745c;
+    --green-dark: #3e5945;
+    --cream: #faf8f2;
+    --ink: #26332b;
+    --muted: #68736b;
+    --white: #ffffff;
 }
 
-#about h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
-    color: #333;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-.about-content {
-    max-width: 850px;
-    margin: 0 auto;
-    line-height: 1.8;
-    font-size: 16px;
-    color: #555;
-}
-
-/* Smooth Scrolling */
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 82px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e9ece7;
+}
+
+.header-content {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    color: var(--ink);
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #455148;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--green);
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background:
+        linear-gradient(90deg, rgba(25, 39, 29, 0.82), rgba(25, 39, 29, 0.22)),
+        url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1800&q=90") center/cover no-repeat;
+}
+
+.hero-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.eyebrow {
+    color: #91ad91;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    max-width: 650px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 540px;
+    color: #f0f2ed;
+    font-size: 1.08rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    border: 0;
+    border-radius: 4px;
+    padding: 13px 23px;
+    background: var(--green);
+    color: var(--white);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 86px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading h2,
+.about-copy h2,
+.contact-intro h2 {
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.section-heading > p:last-child,
+.contact-intro > p:last-child {
+    color: var(--muted);
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.recipe-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid #e9ece7;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(38, 51, 43, 0.06);
+}
+
+.recipe-card img {
+    height: 230px;
+    transition: transform 0.35s ease;
+}
+
+.recipe-card:hover img {
+    transform: scale(1.04);
+}
+
+.recipe-info {
+    padding: 23px;
+}
+
+.recipe-type {
+    color: var(--green);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.recipe-info h3 {
+    margin: 8px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+}
+
+.recipe-info p {
+    color: var(--muted);
+    font-size: 0.94rem;
+    margin-bottom: 16px;
+}
+
+.recipe-time {
+    color: var(--green-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.about-section {
+    background: var(--cream);
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 64px;
+}
+
+.about-image img {
+    height: 470px;
+    border-radius: 8px;
+}
+
+.about-copy h2 {
+    max-width: 520px;
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+}
+
+.contact-intro h2 {
+    margin-bottom: 18px;
+}
+
+.contact-form {
+    padding: 30px;
+    background: var(--cream);
+    border-radius: 8px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #d9dfd8;
+    border-radius: 4px;
+    padding: 12px 13px;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #a9bea9;
+    border-color: var(--green);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.site-footer {
+    padding: 35px 0;
+    background: #26372b;
+    color: #eaf0e9;
+    text-align: center;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--white);
+    margin-bottom: 7px;
+}
+
+.footer-logo span {
+    color: #a9c2a8;
+}
+
+.site-footer p {
+    color: #c6d0c6;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-top: 18px;
+    font-size: 0.8rem !important;
+}
+
+/* Responsive layout for tablets and phones */
+@media (max-width: 800px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .contact-layout {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 560px) {
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        min-height: 470px;
+    }
+
+    .recipe-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 62px 0;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
 }
